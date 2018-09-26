@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /avatar.jpeg
-actionText: 那就吧 →
+actionText: Begin →
 actionLink: /es5/
 features:
 - title: Jeff Atwood
@@ -17,7 +17,7 @@ footer: Copyright © 2018-present Itellboy
 
 ```bash
 # clone repo
-git clone https://github.com/itellboy/docs.git && cd docs
+git clone https://github.com/jianhaihao/jianhaihao.github.io.git && cd docs
 # install dependences
 npm install
 # run dev
