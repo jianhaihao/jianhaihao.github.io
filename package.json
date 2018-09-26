@@ -16,9 +16,9 @@
   "author": "itellboy",
   "license": "MIT",
   "bugs": {
-    "url": "github.com/jianhaihao/jianhaihao.github.io/issues"
+    "url": "https://github.com/jianhaihao/jianhaihao.github.io/issues"
   },
-  "homepage": "github.com/jianhaihao/jianhaihao.github.io#readme",
+  "homepage": "https://github.com/jianhaihao/jianhaihao.github.io#readme",
   "dependencies": {
     "koa": "^2.5.2",
     "vuepress": "^0.14.1"
