@@ -1,12 +1,12 @@
 module.exports = {
-  title: 'Docs',
-  description: '不知道接下来干嘛?',
+  title: 'YiYun',
+  description: 'jianhaihao@gmail.com',
   head: [
     ['link', { rel: 'icon', href: '/avatar.jpeg' }]
   ],
   // evergreen: true,
   themeConfig: {
-    repo: 'https://github.com/itellboy/docs',
+    repo: 'https://github.com/jianhaihao/jianhaihao.github.io',
     lastUpdated: '上次更新',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
