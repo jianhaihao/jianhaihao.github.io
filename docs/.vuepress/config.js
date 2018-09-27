@@ -11,8 +11,8 @@ module.exports = {
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     nav: [
-      { text: 'ES5', link: '/database/' },
-      { text: 'ES2015+', link: '/nginx/' },
+      { text: 'Linux', link: '/linux/directory' },
+      { text: 'Database', link: '/database/mysql-problems' },
     ],
     sidebarDepth: 1,
     sidebar: [
