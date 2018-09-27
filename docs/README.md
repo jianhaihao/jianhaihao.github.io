@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /avatar.jpeg
-actionText: Begin →
+actionText: Learning →
 actionLink: /es5/
-footer: Copyright © 2018-present jianhaihao
+footer: Copyright © 2018-present | jianhaihao@gmail.com
 ---
