@@ -2,6 +2,6 @@
 home: true
 heroImage: /avatar.jpeg
 actionText: Learning →
-actionLink: /linux/directory
+actionLink: /docker/basic
 footer: Copyright © 2018-present | jianhaihao@gmail.com
 ---

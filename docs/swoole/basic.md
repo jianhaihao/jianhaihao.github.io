@@ -1,0 +1,7 @@
+# Swoole 基础知识
+
+* 国内开源C语言编写的扩展
+* 异步、并行、高性能网络通信引擎
+* 支持协程
+
+Swoole 官网：[www.swoole.com](https://www.swoole.com/)
