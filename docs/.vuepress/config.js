@@ -57,6 +57,10 @@ module.exports = {
           '/swoole/basic',
           '/swoole/install',
           '/swoole/tcp-server',
+          '/swoole/udp-server',
+          '/swoole/http-server',
+          '/swoole/ws_server',
+          '/swoole/task',
         ]
       },
       {
