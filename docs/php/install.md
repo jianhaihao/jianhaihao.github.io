@@ -52,7 +52,7 @@ alias php=/home/haojianhai/soft/php/bin/php  # 配置php的实际安装路径
 # 保存并退出
 
 # 执行以下命令使配置生效
-source ～/.bash_profile
+source ~/.bash_profile
 
 ```
 

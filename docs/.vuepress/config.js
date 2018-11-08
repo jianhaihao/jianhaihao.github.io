@@ -23,6 +23,7 @@ module.exports = {
           '/linux/catalog',
           '/linux/vim',
           '/linux/up-down-file',
+          '/linux/docker',
         ]
       },
       {
@@ -32,9 +33,17 @@ module.exports = {
         ]
       },
       {
+        title: 'Mysql',
+        children: [
+          '/mysql/basic',
+          '/mysql/foreign-key',
+        ]
+      },
+      {
         title: 'Mac',
         children: [
           '/mac/basic',
+          '/mac/php-env',
         ]
       },
       {
@@ -60,13 +69,22 @@ module.exports = {
           '/swoole/udp-server',
           '/swoole/http-server',
           '/swoole/ws_server',
-          '/swoole/task',
         ]
       },
       {
-        title: 'Swoft',
+        title: 'Swoft基础',
         children: [
           '/swoft/basic',
+          '/swoft/env-need',
+          '/swoft/install',
+          '/swoft/use',
+        ]
+      },
+      {
+        title: 'Swoft进阶',
+        children: [
+          '/swoft-up/install',
+          '/swoft-up/share',
         ]
       },
       {
