@@ -9,8 +9,8 @@ module.exports = {
     repo: 'https://github.com/jianhaihao/jianhaihao.github.io',
     lastUpdated: '上次更新',
     nav: [
-      { text: 'Swoole', link: '/swoole/install' },
-      { text: 'DSA', link: '/distributed-service-architecture/basic' },
+      { text: 'Swoft', link: '/swoft/basic' },
+      { text: 'Yii2.0', link: '/yii/basic' },
     ],
     sidebarDepth: 1,
     sidebar: [
@@ -58,6 +58,19 @@ module.exports = {
         children: [
           '/php/install',
           '/php/command',
+          '/php/function',
+        ]
+      },
+      {
+        title: 'ThinkPHP5',
+        children: [
+          '/thinkphp/basic',
+        ]
+      },
+      {
+        title: 'Yii2.0',
+        children: [
+          '/yii/basic',
         ]
       },
       {
