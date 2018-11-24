@@ -44,6 +44,7 @@ module.exports = {
         children: [
           '/mac/basic',
           '/mac/php-env',
+          '/mac/command',
         ]
       },
       {
@@ -98,6 +99,8 @@ module.exports = {
         children: [
           '/swoft-up/install',
           '/swoft-up/share',
+          '/swoft-up/operate',
+          '/swoft-up/auth',
         ]
       },
       {
@@ -110,6 +113,12 @@ module.exports = {
         title: '计算机网络',
         children: [
           '/net/tcp-ip',
+        ]
+      },
+      {
+        title: '数据结构',
+        children: [
+          '/data-structure/basic',
         ]
       },
       {

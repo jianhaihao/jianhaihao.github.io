@@ -26,4 +26,19 @@ docker run -p 80:80 --name swoft --rm -d -v /home/swoft/:/var/www/swoft swoft/sw
 
 docker run -p 80:80 --name swoft --rm -d -v /Users/jianhaihao/Documents/Products/WancllMS-Server/swoft/:/var/www/swoft swoft/swoft:latest
 
+# 停止容器
+docker stop swoft
+
+# 重启容器
+docker restart swoft
+
+# 查看docker日志
+docker logs swoft
+
+# 在docker容器执行其他语言命令
+docker exec -it swoft [命令]   # 执行[命令]
+
+docker exec -it swoft php -m   # 执行 php -m 命令
+
+
 ```

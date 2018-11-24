@@ -74,7 +74,6 @@ Options:
 Example:
   php bin/swoft entity:create -d test
 
-
   php bin/swoft entity:create -d wancll_cloud_v1 -i system_staff_role_entity_powers --entity-file-path @app/module/v1/platform/Models/Entity
 
 ```
