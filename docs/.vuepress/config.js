@@ -24,6 +24,8 @@ module.exports = {
           '/linux/vim',
           '/linux/up-down-file',
           '/linux/docker',
+          '/linux/demo',
+          '/linux/git',
         ]
       },
       {
@@ -52,6 +54,7 @@ module.exports = {
         children: [
           '/docker/basic',
           '/docker/docker-compose',
+          '/docker/demo',
         ]
       },
       {
