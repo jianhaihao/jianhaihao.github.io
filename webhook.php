@@ -15,160 +15,160 @@ if ($status1 == 'Fail') {
 }
 
 // 2. 提交旧文件删除
-exec("git commit -m 'del' 2>&1", $result2, $code2);
+// exec("git commit -m 'del' 2>&1", $result2, $code2);
 
-$status2 = $code2 == 0 ? 'Success' : 'Fail';
-echo "git commit -m 'del'：" . $status2;
-echo "<br />";
+// $status2 = $code2 == 0 ? 'Success' : 'Fail';
+// echo "git commit -m 'del'：" . $status2;
+// echo "<br />";
 
-if ($status2 == 'Fail') {
-    echo "<pre>";
-    print_r($result2);
-}
+// if ($status2 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result2);
+// }
 
-// 3. 同步远程旧文件删除
-exec("git push 2>&1", $result3, $code3);
+// // 3. 同步远程旧文件删除
+// exec("git push 2>&1", $result3, $code3);
 
-$status3 = $code3 == 0 ? 'Success' : 'Fail';
-echo "git push：" . $status3;
-echo "<br />";
+// $status3 = $code3 == 0 ? 'Success' : 'Fail';
+// echo "git push：" . $status3;
+// echo "<br />";
 
-if ($status3 == 'Fail') {
-    echo "<pre>";
-    print_r($result3);
-}
+// if ($status3 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result3);
+// }
 
-// 4. 切换分支
-exec("git checkout edit 2>&1", $result4, $code4);
+// // 4. 切换分支
+// exec("git checkout edit 2>&1", $result4, $code4);
 
-$status4 = $code4 == 0 ? 'Success' : 'Fail';
-echo "git checkout edit：" . $status4;
-echo "<br />";
+// $status4 = $code4 == 0 ? 'Success' : 'Fail';
+// echo "git checkout edit：" . $status4;
+// echo "<br />";
 
-if ($status4 == 'Fail') {
-    echo "<pre>";
-    print_r($result4);
-}
+// if ($status4 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result4);
+// }
 
-// 5. 拉取最新代码
-exec("git pull 2>&1", $result5, $code5);
+// // 5. 拉取最新代码
+// exec("git pull 2>&1", $result5, $code5);
 
-$status5 = $code5 == 0 ? 'Success' : 'Fail';
-echo "git pull：" . $status5;
-echo "<br />";
+// $status5 = $code5 == 0 ? 'Success' : 'Fail';
+// echo "git pull：" . $status5;
+// echo "<br />";
 
-if ($status5 == 'Fail') {
-    echo "<pre>";
-    print_r($result5);
-}
+// if ($status5 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result5);
+// }
 
-// 6. 打包最新代码
-exec("zip -r dist.zip docs/.vuepress/dist/ 2>&1", $result6, $code6);
+// // 6. 打包最新代码
+// exec("zip -r dist.zip docs/.vuepress/dist/ 2>&1", $result6, $code6);
 
-$status6 = $code6 == 0 ? 'Success' : 'Fail';
-echo "zip -r dist.zip docs/.vuepress/dist/：" . $status6;
-echo "<br />";
+// $status6 = $code6 == 0 ? 'Success' : 'Fail';
+// echo "zip -r dist.zip docs/.vuepress/dist/：" . $status6;
+// echo "<br />";
 
-if ($status6 == 'Fail') {
-    echo "<pre>";
-    print_r($result6);
-}
+// if ($status6 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result6);
+// }
 
-// 7. 切换master分支
-exec("git checkout master 2>&1", $result7, $code7);
+// // 7. 切换master分支
+// exec("git checkout master 2>&1", $result7, $code7);
 
-$status7 = $code7 == 0 ? 'Success' : 'Fail';
-echo "git checkout master：" . $status7;
-echo "<br />";
+// $status7 = $code7 == 0 ? 'Success' : 'Fail';
+// echo "git checkout master：" . $status7;
+// echo "<br />";
 
-if ($status7 == 'Fail') {
-    echo "<pre>";
-    print_r($result7);
-}
+// if ($status7 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result7);
+// }
 
-// 8. 解压压缩包
-exec("unzip dist.zip 2>&1", $result8, $code8);
+// // 8. 解压压缩包
+// exec("unzip dist.zip 2>&1", $result8, $code8);
 
-$status8 = $code8 == 0 ? 'Success' : 'Fail';
-echo "unzip dist.zip：" . $status8;
-echo "<br />";
+// $status8 = $code8 == 0 ? 'Success' : 'Fail';
+// echo "unzip dist.zip：" . $status8;
+// echo "<br />";
 
-if ($status8 == 'Fail') {
-    echo "<pre>";
-    print_r($result8);
-}
+// if ($status8 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result8);
+// }
 
-// 9. 移动文件到根目录
-exec("mv docs/.vuepress/dist/* ./ 2>&1", $result9, $code9);
+// // 9. 移动文件到根目录
+// exec("mv docs/.vuepress/dist/* ./ 2>&1", $result9, $code9);
 
-$status9 = $code9 == 0 ? 'Success' : 'Fail';
-echo "mv docs/.vuepress/dist/* ./：" . $status9;
-echo "<br />";
+// $status9 = $code9 == 0 ? 'Success' : 'Fail';
+// echo "mv docs/.vuepress/dist/* ./：" . $status9;
+// echo "<br />";
 
-if ($status9 == 'Fail') {
-    echo "<pre>";
-    print_r($result9);
-}
+// if ($status9 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result9);
+// }
 
-// 10. 删除压缩包文件
-exec("rm -f dist.zip 2>&1", $result10, $code10);
+// // 10. 删除压缩包文件
+// exec("rm -f dist.zip 2>&1", $result10, $code10);
 
-$status10 = $code10 == 0 ? 'Success' : 'Fail';
-echo "rm -f dist.zip：" . $status10;
-echo "<br />";
+// $status10 = $code10 == 0 ? 'Success' : 'Fail';
+// echo "rm -f dist.zip：" . $status10;
+// echo "<br />";
 
-if ($status10 == 'Fail') {
-    echo "<pre>";
-    print_r($result10);
-}
+// if ($status10 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result10);
+// }
 
-// 11. 删除解压缩目录
-exec("rm -rf docs 2>&1", $result11, $code11);
+// // 11. 删除解压缩目录
+// exec("rm -rf docs 2>&1", $result11, $code11);
 
-$status11 = $code11 == 0 ? 'Success' : 'Fail';
-echo "rm -rf docs：" . $status11;
-echo "<br />";
+// $status11 = $code11 == 0 ? 'Success' : 'Fail';
+// echo "rm -rf docs：" . $status11;
+// echo "<br />";
 
-if ($status11 == 'Fail') {
-    echo "<pre>";
-    print_r($result11);
-}
+// if ($status11 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result11);
+// }
 
-// 12. 提交新增文件
-exec("git add . 2>&1", $result12, $code12);
+// // 12. 提交新增文件
+// exec("git add . 2>&1", $result12, $code12);
 
-$status12 = $code12 == 0 ? 'Success' : 'Fail';
-echo "git add .：" . $status12;
-echo "<br />";
+// $status12 = $code12 == 0 ? 'Success' : 'Fail';
+// echo "git add .：" . $status12;
+// echo "<br />";
 
-if ($status12 == 'Fail') {
-    echo "<pre>";
-    print_r($result12);
-}
+// if ($status12 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result12);
+// }
 
-// 13. 提交修改到本地暂存区
-exec("git commit -m 'add' 2>&1", $result13, $code13);
+// // 13. 提交修改到本地暂存区
+// exec("git commit -m 'add' 2>&1", $result13, $code13);
 
-$status13 = $code13 == 0 ? 'Success' : 'Fail';
-echo "git commit -m 'add'：" . $status13;
-echo "<br />";
+// $status13 = $code13 == 0 ? 'Success' : 'Fail';
+// echo "git commit -m 'add'：" . $status13;
+// echo "<br />";
 
-if ($status13 == 'Fail') {
-    echo "<pre>";
-    print_r($result13);
-}
+// if ($status13 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result13);
+// }
 
-// 14. 推送修改到远程服务器
-exec("git push 2>&1", $result14, $code14);
+// // 14. 推送修改到远程服务器
+// exec("git push 2>&1", $result14, $code14);
 
-$status14 = $code14 == 0 ? 'Success' : 'Fail';
-echo "git push：" . $status14;
-echo "<br />";
+// $status14 = $code14 == 0 ? 'Success' : 'Fail';
+// echo "git push：" . $status14;
+// echo "<br />";
 
-if ($status14 == 'Fail') {
-    echo "<pre>";
-    print_r($result14);
-}
+// if ($status14 == 'Fail') {
+//     echo "<pre>";
+//     print_r($result14);
+// }
 
 // git rm -rf !(webhook.php|.gitignore)
 // git commit -m 'del'
