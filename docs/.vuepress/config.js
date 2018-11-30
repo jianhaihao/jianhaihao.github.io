@@ -26,6 +26,7 @@ module.exports = {
           '/linux/docker',
           '/linux/demo',
           '/linux/git',
+          '/linux/demo2',
         ]
       },
       {
