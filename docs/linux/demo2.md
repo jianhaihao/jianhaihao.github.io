@@ -194,6 +194,8 @@ docker cp swoft:/var/www/swoft .  # 注意点号，表示拷贝到当前目录
 # 从本地文件运行swoft容器：
 docker run -p 8080:80 --name swoft -v /home/swoft/:/var/www/swoft --rm -d swoft/swoft:latest
 
+docker run -p 8080:80 --name swoft -v /home/WancllMS-Server/swoft/:/var/www/swoft --rm -d swoft/swoft:latest
+
 # 查看运行的容器
 docker ps
 
