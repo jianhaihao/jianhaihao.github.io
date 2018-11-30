@@ -2,16 +2,56 @@
 
 // webhook 代码自动同步文件，请勿修改
 
-exec("git pull 2>&1", $result, $code);
+// 1. 删除旧文件
+exec("git rm -rf !(webhook.php|.gitignore) 2>&1", $result1, $code1);
 
-$status = $code == 0 ? 'Success' : 'Fail';
-echo "git pull：" . $status;
+$status1 = $code1 == 0 ? 'Success' : 'Fail';
+echo "git rm -rf !(webhook.php|.gitignore)：" . $status1;
 echo "<br />";
 
-if ($status == 'Fail') {
+if ($status1 == 'Fail') {
     echo "<pre>";
-    print_r($result);
+    print_r($result1);
 }
+
+// 2. 提交旧文件删除
+exec("git commit -m 'del' 2>&1", $result2, $code2);
+
+$status2 = $code2 == 0 ? 'Success' : 'Fail';
+echo "git commit -m 'del'：" . $status2;
+echo "<br />";
+
+if ($status2 == 'Fail') {
+    echo "<pre>";
+    print_r($result2);
+}
+
+// 3. 同步远程旧文件删除
+exec("git push 2>&1", $result3, $code3);
+
+$status3 = $code3 == 0 ? 'Success' : 'Fail';
+echo "git push：" . $status3;
+echo "<br />";
+
+if ($status3 == 'Fail') {
+    echo "<pre>";
+    print_r($result3);
+}
+
+// git rm -rf !(webhook.php|.gitignore)
+// git commit -m 'del'
+// git push
+// git checkout edit
+// git pull
+// zip -r dist.zip docs/.vuepress/dist/
+// git checkout master 
+// unzip dist.zip
+// mv docs/.vuepress/dist/* ./
+// rm -f dist.zip
+// rm -rf docs
+// git add .
+// git commit -m 'add'
+// git  push
 
 // 同步代码结果发送邮箱
 // date_default_timezone_set('PRC');
