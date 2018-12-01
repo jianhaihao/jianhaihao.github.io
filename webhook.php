@@ -3,7 +3,7 @@
 // webhook 代码自动同步文件，请勿修改
 
 // 1. 删除旧文件
-exec("git rm -rf !(webhook.php|.gitignore) 2>&1", $result1, $code1);
+exec("sudo git rm -rf !(webhook.php|.gitignore) 2>&1", $result1, $code1);
 
 $status1 = $code1 == 0 ? 'Success' : 'Fail';
 echo "git rm -rf !(webhook.php|.gitignore)：" . $status1;
