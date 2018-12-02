@@ -70,6 +70,7 @@ module.exports = {
           '/php/install',
           '/php/command',
           '/php/function',
+          '/php/attention',
         ]
       },
       {
