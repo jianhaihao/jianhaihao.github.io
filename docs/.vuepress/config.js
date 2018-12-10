@@ -124,6 +124,7 @@ module.exports = {
         title: '计算机网络',
         children: [
           '/net/tcp-ip',
+          '/net/http',
         ]
       },
       {
