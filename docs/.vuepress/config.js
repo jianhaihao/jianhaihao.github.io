@@ -15,6 +15,18 @@ module.exports = {
     sidebarDepth: 1,
     sidebar: [
       {
+        title: '吉他学习',
+        children: [
+          '/guitar/basic',
+        ]
+      },
+      {
+        title: 'Web安全',
+        children: [
+          '/web-safety/basic',
+        ]
+      },
+      {
         title: 'Linux',
         children: [
           '/linux/basic',
@@ -22,11 +34,24 @@ module.exports = {
           '/linux/other-command',
           '/linux/catalog',
           '/linux/vim',
+          '/linux/disk',
           '/linux/up-down-file',
           '/linux/docker',
           '/linux/demo',
           '/linux/git',
           '/linux/demo2',
+        ]
+      },
+      {
+        title: 'Linux进阶',
+        children: [
+          '/linux-up/manager',
+        ]
+      },
+      {
+        title: 'ECS',
+        children: [
+          '/ecs/basic',
         ]
       },
       {
