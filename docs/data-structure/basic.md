@@ -8,8 +8,6 @@
 2. 树结构：二叉树、二分搜索树、AVL、红黑树、Treap、Splay、堆、Trie、线段树、K-D树、并查集、哈夫曼树、……
 3. 图结构：领接矩阵、邻接表、……
 
-
 > 数据结构 + 算法 = 程序
-
 
 [LeetCode](https://leetcode.com/) [LeetCode中文网](https://leetcode-cn.com/)

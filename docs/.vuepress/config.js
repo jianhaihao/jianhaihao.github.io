@@ -15,18 +15,6 @@ module.exports = {
     sidebarDepth: 1,
     sidebar: [
       {
-        title: '吉他学习',
-        children: [
-          '/guitar/basic',
-        ]
-      },
-      {
-        title: 'Web安全',
-        children: [
-          '/web-safety/basic',
-        ]
-      },
-      {
         title: 'Linux',
         children: [
           '/linux/basic',
@@ -52,6 +40,7 @@ module.exports = {
         title: 'ECS',
         children: [
           '/ecs/basic',
+          '/ecs/centos7',
         ]
       },
       {
@@ -71,6 +60,7 @@ module.exports = {
         children: [
           '/mysql/basic',
           '/mysql/foreign-key',
+          '/mysql/colony',
         ]
       },
       {
@@ -87,6 +77,7 @@ module.exports = {
           '/docker/basic',
           '/docker/docker-compose',
           '/docker/demo',
+          '/docker/docker-up',
         ]
       },
       {
@@ -170,6 +161,18 @@ module.exports = {
           '/distributed-service-architecture/basic',
         ]
       },
+      {
+        title: 'Web安全',
+        children: [
+          '/web-safety/basic',
+        ]
+      },
+      // {
+      //   title: '吉他学习',
+      //   children: [
+      //     '/guitar/basic',
+      //   ]
+      // },
     ],
   }
 }
