@@ -147,6 +147,7 @@ module.exports = {
         title: '数据结构',
         children: [
           '/data-structure/basic',
+          '/data-structure/array',
         ]
       },
       {
