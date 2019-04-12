@@ -13,3 +13,4 @@
 | 防火墙       |   iptables       |   firewald       | 
 | 服务管理       |   System V init       |   systemd       | 
 | 时间同步服务       |   ntp       |   chrony       | 
+

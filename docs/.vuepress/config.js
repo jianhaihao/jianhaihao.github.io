@@ -34,6 +34,7 @@ module.exports = {
         title: 'Linux进阶',
         children: [
           '/linux-up/manager',
+          '/linux-up/performance',
         ]
       },
       {

@@ -12,6 +12,46 @@
 > 获取数据的容量   
 > 返回数组是否为空   
 
+```java
+
+// 定义泛型数组
+public class Array<E> {
+
+	private E[] data;
+	private int size;
+
+	// 构造函数，传入数组的容量capacity构造Array
+	public Array(int capacity){
+		data = (E[])new Object[capacity];
+		size = 0;
+	}
+    
+    // 无参数构造函数，默认容量10
+	public Array(){
+		this(10);
+	}
+
+	// 获取数组中的元素个数
+	public int getSize(){
+		return size;
+	}
+
+    // 获取数组容量
+    public int getCapacity(){
+		return data.length;
+	}
+
+	// 返回数组是否为空
+	public boolean isEmpty(){
+		return size == 0;
+	}
+
+	// ……
+
+}
+
+```
+
 ## 添加元素
 
 > 向数组末尾添加元素e
@@ -60,14 +100,17 @@ add(0, e);
 
 ```java
 
-// 校验：数组是否已满
-if(size == data.length){
-   // 数组容量已满，抛出异常
-}
-
 // 校验：index是否合法
 if(index < 0 || index > size){
    // index不能为负数，且不能大于size（即数组中间不能含有空元素）
+}
+
+// 校验：数组是否已满
+if(size == data.length){
+   // 处理1：数组容量已满，抛出异常
+
+   // 处理2：进行扩容
+   resize(2*data.length);
 }
 
 // 将>=index位置的所有元素往后移动一位
@@ -172,6 +215,15 @@ for (int i = index + 1; i < size; i++) {
 size--;
 // data[size] = null;
 
+// 方案1
+if (size == data.length / 2) {
+	resize(data.length/2);
+}
+// 方案2（防止复杂度震荡）
+if (size == data.length / 4 && data.length / 2 != 0) {
+	resize(data.length/2);
+}
+
 // 返回删除元素 
 return ret;
 
@@ -210,3 +262,53 @@ if (index != -1) {
 }
 
 ```
+
+## 使用泛型
+
+> 让数据结构可以放置“任何”数据类型
+> 不可以是基本数据类型，只能是类对象   
+  boolean 、 byte 、 char 、 short 、 int 、 long 、 float 、 double
+> 每个基本数据类型都有对应的包装类
+  Boolean 、 Byte 、 Char 、 Short 、 Int 、 Long 、 Float 、 Double
+
+## 动态数组
+
+`resize(int newCapacity)`
+
+```java
+
+E[] newData = (E[])new Object[newCapacity];
+
+for (int i = 0; i < size; i++) {
+	newData[i] = data[i];
+}
+
+data = newData;
+
+```
+
+## 时间复杂度
+
+> O(1)，O(n)，O(lgn)，O(nlogn)，O(n^2)   
+> 大O描述的是算法的运行时间和输入数据之间的关系   
+
+动态数组的时间复杂度
+>* 增：O(n)  
+>* 删：O(n)  
+>* 改：已知索引O(1)，未知索引O(n)  
+>* 查：已知索引O(1)，未知索引O(n)  
+
+均摊复杂度
+> 动态数组扩容与缩容不是每次都发生的
+> 平均看来是每两次操作促发一次
+> 按均摊复杂度分析，动态数组增、删元素时间复杂度为O(1)
+
+复杂度震荡
+> removeLast时resize过于着急(Eager)   
+> 解决方案：Lazy
+> 当size == capacity/4 时，才将capacity减半
+
+
+
+
+
